@@ -1,3 +1,9 @@
+Forked with intention to:
+
+ - add rsync over ssh
+ - add diskspace check
+
+-----
 ORIGINALY PUBLISHED ON MY BLOG AT: http://anouar.im/2011/12/how-to-backup-with-rsync-tar-gpg-on-osx.html
 
 # Backup Manager: How to backup with RSYNC, TAR, CRON and GPG
