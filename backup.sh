@@ -77,7 +77,7 @@ if [ $(ls -d $DAILY_ARCHIVES_DIR/*.tar.gz 2> /dev/null | wc -l) != "0" ]
 then
   gpg -r $EMAIL --encrypt-files $DAILY_ARCHIVES_DIR/*.tar.gz \
     && rm -rf $DAILY_ARCHIVES_DIR/*.tar.gz \
-    && printf "\t- Encrypted archive in %s and removed the unencrypted version\n" $DAILY_ARCHIVES_DIR  
+    && printf "\t- Encrypted archive in %s and removed the unencrypted version\n" $DAILY_ARCHIVES_DIR >> $LOGFILE 
 fi
 
 ################################################################################
