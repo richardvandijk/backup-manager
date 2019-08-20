@@ -1,6 +1,6 @@
 Forked with intention to:
 
- - add rsync over ssh, move weekly / monthly to different location
+ - add rsync over ssh
  - add diskspace check
 
 -----
