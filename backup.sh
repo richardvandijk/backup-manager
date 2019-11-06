@@ -46,7 +46,7 @@ printf "[%12d] Backup started\n" $NOW >> $LOGFILE
 # Step #1: Retreive files to create snapshots with RSYNC.
 ################################################################################
 
-rsync -azH --hard-links --link-dest=$CURRENT_LINK  $BACKUP_SOURCE_DIR $SNAPSHOT_DIR/$NOW \
+rsync -auzH --hard-links --link-dest=$CURRENT_LINK  $BACKUP_SOURCE_DIR $SNAPSHOT_DIR/$NOW \
   && ln -snf $(ls -1d $SNAPSHOT_DIR/* | tail -n1) $CURRENT_LINK \
   && printf "\t- Copy from %s to %s successfull \n" $BACKUP_SOURCE_DIR $SNAPSHOT_DIR/$NOW >> $LOGFILE
 
